@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="naloga.css">
+    <script src="naloga.js"></script> 
+</head>
+  <body>
+    <h1> Prijavni obrazec <br> za vse kandidate </h1>
+    <table align ="center" cellpadding="10"> <!--nevem zakaj je rdeč align lol-->
+         <tr>
+            <td>Ime:</td>
+            <td>
+              <input type="text" id="name" name="name" placeholder="Vpiši svoje ime"> <!-- spremenil ID v celem table (tudi v css), da lahko naredim uvoz v js -->
+            </td>
+        </tr>
+        <tr>
+           <td>Priimek:</td>
+           <td>
+             <input type="text" id="priimek" name="name" placeholder="Vpiši svoj Priimek">
+            </td>
+       </tr>
+       <tr>
+          <td>E-mail:</td>
+          <td>
+            <input type="email" id="email" name="email" placeholder="Vpiši svoj E-mail">
+          </td>
+      </tr>
+      <tr>
+         <td>Datum rojstva:</td>
+         <td>
+           <input type="date" id="datumrojstva" name="DOB">
+          </td>
+     </tr>
+     <tr>
+       <td>Spol:</td>
+       <td>
+         <input id="spol" type="radio" name="spol" value="1" checked="checked">M 
+         <input id="spol" type="radio"name="spol" value="0"> Ž
+        </td>
+    <tr>
+       <td>Ulica in hišna številka:</td>
+       <td>
+         <textarea rows="6" cols="25" placeholder="Vnesi svoj naslov"></textarea>
+        </td>
+      <tr>
+        <td>Poštna številka:</td>
+        <td>
+          <input type="number"id="name" name="num" placeholder="Vpiši poštno številko">
+        </td>
+      </tr>
+     <tr>
+       <td>Mesto:</td>
+       <td>
+         <input type="text" id="name" name="mesto" placeholder="Vpiši mesto">
+        </td>
+    </tr>
+    <tr>
+        <td>Stopnja izobrazbe:</td>
+        <td> <!-- Označuje se lahko vse ne samo enega -->
+          <input type="radio" name="izobrazba" value="4" checked="checked">IV 
+          <input type="radio" name="izobrazba" value="5"> V 
+          <input type="radio" name="izobrazba" value="6"> VI 
+          <input type="radio" name="izobrazba" value="7"> VII
+          <!-- ime mora bit enako pri vseh, drugače ne bo šlo označit samo enega -->
+        </td>
+    </tr>
+    <tr>
+        <td>Dodatno znanje:</td>
+        <td>
+          <input type="radio" name="znanje" value="Programiranje"> Programiranje <br> 
+          <input type="radio" name="znanje" value="Oblikovanje"> Oblikovanje <br>
+          <input type="radio" name="znanje" value="Načrtovanje"> Načrtovanje <br>
+          <input type="radio" name="znanje" value="Optimizacija"> Optimizacija</td>
+          <!-- ime mora bit enako pri vseh, drugače ne bo šlo označit samo enega, value je tisto kar se bo posredovalo v JS -->
+    </tr>
+   <tr>
+      <td align="center" colspan="2">
+       <!-- <input id="gumb" type="submit" value="Oddaj">-->
+       <button onclick="onClick()">Oddaj</button> <!-- tukaj je gumb bolj logičen zaradi onclick forme -->
+      </td>
+   </tr>
+   </table>
+  </body>
+</html>
